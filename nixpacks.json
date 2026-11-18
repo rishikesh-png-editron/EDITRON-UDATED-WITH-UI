@@ -1,0 +1,11 @@
+{
+  "providers": ["node", "python"],
+  "phases": {
+    "setup": {
+      "aptPkgs": ["ffmpeg"]
+    },
+    "install": {
+      "cmds": ["npm install"]
+    }
+  }
+}

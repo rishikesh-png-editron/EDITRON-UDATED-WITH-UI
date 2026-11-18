@@ -138,7 +138,7 @@
 }
 
 /* Professional Monochrome Utilities */
-.capgen-gradient-text {
+.editron-gradient-text {
   background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -180,42 +180,52 @@
     0 1px 2px rgba(0,0,0,0.8);
 }
 
-.capgen-subtle-glow {
+.liquid-metal-border-shader {
+  box-sizing: border-box;
+  padding: 2px;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.liquid-metal-border-shader canvas {
+  position: absolute !important;
+  inset: 0;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit;
+}
+
+.editron-subtle-glow {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
-.capgen-grid-bg {
+.editron-grid-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
-.capgen-radial-highlight {
+.editron-radial-highlight {
   background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
 }
 
 /* Professional Scrollbar */
-.capgen-scroll::-webkit-scrollbar {
+.editron-scroll::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-.capgen-scroll::-webkit-scrollbar-track {
+.editron-scroll::-webkit-scrollbar-track {
   background: #000000;
 }
-.capgen-scroll::-webkit-scrollbar-thumb {
+.editron-scroll::-webkit-scrollbar-thumb {
   background: #333333;
   border-radius: 3px;
 }
-.capgen-scroll::-webkit-scrollbar-thumb:hover {
+.editron-scroll::-webkit-scrollbar-thumb:hover {
   background: #ffffff;
-}
-
-@keyframes capgen-pulse-word {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
-}
-
-.capgen-active-word {
-  animation: capgen-pulse-word 0.3s ease-in-out;
 }
